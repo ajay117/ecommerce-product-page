@@ -6,9 +6,9 @@
 
 :root {
   --orange: hsl(26, 100%, 55%);
-  --pare-oraneg: hsl(25, 100%, 94%);
-  --dark-blue: hsl(220, 13%, 13%);
-  --dark-grayish-blue: hsl(219, 9%, 45%);
+  --pare-orange: hsl(25, 100%, 94%);
+  --dark-blue: rgb(29, 32, 37);
+  --dark-grayish-blue: rgb(104, 112, 125);
   --grayish-blue: hsl(220, 14%, 75%);
   --light-grayish-blue: hsl(223, 64%, 98%);
   --white: hsl(0, 0%, 100%);
@@ -17,6 +17,10 @@
   /* - Black (with 75% opacity for lightbox background): hsl(0, 0%, 0%) */
 }
 
+html,
+body {
+  height: 100%;
+}
 html {
   font-size: 10px;
 }
@@ -29,13 +33,13 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 25px;
+
   height: 60px;
 }
 
 nav img {
   display: block;
-  width: 26px;
+  width: 27px;
 }
 
 .flex-container {
@@ -54,14 +58,14 @@ nav img {
 }
 
 .menu-list {
-  /* border: 1px solid black; */
   width: 70%;
-  position: absolute;
+  position: fixed;
   top: 0;
   height: 100%;
   background-color: var(--white);
   padding: 20px;
   font-weight: 700;
+  z-index: 10;
 }
 
 .menu-list ul {
@@ -76,14 +80,188 @@ nav img {
 }
 
 .menu-icon,
-.close-icon {
+.close-icon,
+.cart {
   cursor: pointer;
   transform: scale(1.1);
+  width: 23px;
 }
 .menu-icon:hover,
-.close-icon:hover {
-  transform: scale(0.8);
+.close-icon:hover,
+.cart:hover {
+  transform: scale(0.9);
 }
 .cart {
   width: 35px;
+}
+.product-brand {
+  color: var(--dark-grayish-blue);
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.product-info {
+  color: var(--dark-grayish-blue);
+  line-height: 1.5;
+}
+.product-item,
+.product-price {
+  font-weight: 700;
+  font-size: 3rem;
+}
+.product-discount {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  display: inline-block;
+  padding: 5px 7px;
+}
+.product-price-info {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.product-original-cost {
+  color: var(--dark-grayish-blue);
+  font-weight: 700;
+  text-decoration: line-through;
+}
+.btn-primary {
+  width: 100%;
+  padding: 15px 0;
+  justify-content: center;
+  gap: 15px;
+  color: var(--dark-blue);
+  font-weight: 700;
+  background-color: var(--orange);
+  border: 0;
+  border-radius: 12px;
+}
+.btn-primary:hover {
+  font-size: 1.4rem;
+}
+
+.product-counter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 15px;
+  margin-bottom: 15px;
+  background-color: var(--light-grayish-blue);
+}
+.product-counter span {
+  display: inline-block;
+}
+.product-total-count {
+  font-weight: 700;
+}
+.increment,
+.decrement {
+  font-size: 3rem;
+  color: var(--orange);
+  font-weight: 700;
+  cursor: pointer;
+}
+.increment:hover,
+.decrement:hover {
+  transform: scale(0.8);
+}
+#cart {
+  position: relative;
+}
+.cart-total-products {
+  position: absolute;
+  top: -25px;
+  right: 10px;
+  border-radius: 50%;
+  padding: 1px 6px;
+  font-size: 1.2rem;
+  background-color: var(--orange);
+  color: var(--white);
+}
+.cart-list {
+  margin: 7px;
+  padding-bottom: 25px;
+  background-color: var(--white);
+  position: absolute;
+  z-index: 10;
+  width: 97%;
+}
+.cart-img-container {
+  width: 60px;
+}
+.cart-empty {
+  padding: 40px 40px;
+  display: flex;
+  justify-content: center;
+}
+.cart-list-heading {
+  border-bottom: 3px solid var(--light-grayish-blue);
+}
+
+.carousel-control {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-control-icon {
+  padding: 8px 15px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  cursor: pointer;
+}
+.carousel-control-icon:hover {
+  transform: scale(0.9);
+}
+
+.flex {
+  display: flex;
+}
+.align-center {
+  align-items: center;
+}
+.justify-space-between {
+  justify-content: space-between;
+}
+.gap-1 {
+  gap: 10px;
+}
+.px-1 {
+  padding-left: 10px;
+  padding-right: 10px;
+}
+.px-2 {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.py-1 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.py-2 {
+  padding-top: 15px;
+  padding-bottom: 15px;
+}
+.img_responsive {
+  width: 100%;
+}
+.text_gray {
+  color: var(--dark-grayish-blue);
+}
+.text_bold {
+  font-weight: 700;
+}
+.text_dark {
+  color: var(--dark-blue);
+}
+
+.text_center {
+  text-align: center;
+}
+.pos_relative {
+  position: relative;
 }
