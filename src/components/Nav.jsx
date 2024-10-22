@@ -1,9 +1,11 @@
 import PropTypes from "prop-types";
 import Avatar from "../assets/images/image-avatar.png";
 
-export const Nav = ({ showMenu }) => {
+export const Nav = ({ showMenu, cart, toggleCartList }) => {
+  const totalProducts = cart.count;
+
   return (
-    <nav>
+    <nav className="px-1">
       <div className="flex-container">
         <div className="menu-icon">
           <svg
@@ -22,9 +24,15 @@ export const Nav = ({ showMenu }) => {
         <p className="brandname">sneakers</p>
       </div>
 
-      <div className="flex-container">
-        <div>
+      <div className="flex-container align-center">
+        <div id="cart">
+          {totalProducts ? (
+            <p className="cart-total-products">{totalProducts}</p>
+          ) : (
+            ""
+          )}
           <svg
+            onClick={toggleCartList}
             className="cart"
             width="22"
             height="20"
@@ -45,4 +53,6 @@ export const Nav = ({ showMenu }) => {
 
 Nav.propTypes = {
   showMenu: PropTypes.func.isRequired,
+  cart: PropTypes.object.isRequired,
+  toggleCartList: PropTypes.func.isRequired,
 };
