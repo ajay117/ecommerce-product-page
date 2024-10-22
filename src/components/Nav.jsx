@@ -4,6 +4,9 @@ import Avatar from "../assets/images/image-avatar.png";
 export const Nav = ({ showMenu, cart, toggleCartList }) => {
   const totalProducts = cart.count;
 
+  const list = ["Men", "Women", "About", "Contact"];
+  const renderList = list.map((item, index) => <li key={index}>{item}</li>);
+
   return (
     <nav className="px-1">
       <div className="flex-container">
@@ -22,6 +25,9 @@ export const Nav = ({ showMenu, cart, toggleCartList }) => {
           </svg>
         </div>
         <p className="brandname">sneakers</p>
+        <div className="menu-list">
+          <ul>{renderList}</ul>
+        </div>
       </div>
 
       <div className="flex-container align-center">
