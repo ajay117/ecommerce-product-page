@@ -20,7 +20,7 @@ export const ProductCarouselMobile = () => {
     }
   };
   return (
-    <div className="pos_relative">
+    <div className="pos_relative mobile-carousel">
       <div>
         <img src={imgArr[carouselImgIndex]} className="img_responsive" alt="" />
       </div>

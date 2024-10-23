@@ -25,7 +25,7 @@ export const Nav = ({ showMenu, cart, toggleCartList }) => {
           </svg>
         </div>
         <p className="brandname">sneakers</p>
-        <div className="menu-list">
+        <div className="nav-menu-list">
           <ul>{renderList}</ul>
         </div>
       </div>
