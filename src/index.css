@@ -281,6 +281,9 @@ nav img {
 .text_center {
   text-align: center;
 }
+.text_right {
+  text-align: right;
+}
 .pos_relative {
   position: relative;
 }
@@ -328,7 +331,7 @@ nav img {
     display: flex;
     justify-content: space-between;
   }
-  .product-thumbnail-img img{
+  .product-thumbnail-img img {
     width: 24%;
   }
 
@@ -343,5 +346,18 @@ nav img {
     height: calc(100vh - 60px);
     display: flex;
     align-items: center;
+  }
+
+  .desktop-carousel-slider {
+    position: absolute;
+    width: 450px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .desktop-carousel-slider .close-icon {
+    position: absolute;
+    right: 0;
+    top: -30px;
   }
 }
