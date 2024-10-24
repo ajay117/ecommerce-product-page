@@ -41,7 +41,7 @@ const Carousel = ({
         />
       );
     }
-    return <img onClick={() => setImage(index)} key={index} src={img} alt="" />;
+    return <img className="br-1" onClick={() => setImage(index)} key={index} src={img} alt="" />;
   });
 
   return (
@@ -57,7 +57,7 @@ const Carousel = ({
           </svg>
         </div>
         {/* <div className="main-product-img mb-2"> */}
-        <img className="img_responsive mb-3" src={mainImage} alt="" />
+        <img className="img_responsive mb-3 br-1" src={mainImage} alt="" />
         {/* </div> */}
         <div className="product-thumbnail-img">{renderThumbnail}</div>
 
@@ -136,19 +136,19 @@ export const ProductCarouselDesktop = () => {
         <img
           onClick={showCarousel}
           key={index}
-          className="thumbnail_light"
+          className="thumbnail_light br-1"
           src={img}
           alt=""
         />
       );
     }
-    return <img onClick={showCarousel} key={index} src={img} alt="" />;
+    return <img className="br-1" onClick={showCarousel} key={index} src={img} alt="" />;
   });
   return (
     <>
       <div className="desktop-carousel">
         {/* <div className="main-product-img mb-2"> */}
-        <img className="img_responsive mb-3" src={mainImage} alt="" />
+        <img className="img_responsive mb-3 br-1" src={mainImage} alt="" />
         {/* </div> */}
         <div className="product-thumbnail-img">{renderThumbnail}</div>
       </div>
