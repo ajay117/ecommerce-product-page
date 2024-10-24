@@ -148,7 +148,7 @@ export const ProductCarouselDesktop = () => {
     <>
       <div className="desktop-carousel">
         {/* <div className="main-product-img mb-2"> */}
-        <img className="img_responsive" src={mainImage} alt="" />
+        <img className="img_responsive mb-3" src={mainImage} alt="" />
         {/* </div> */}
         <div className="product-thumbnail-img">{renderThumbnail}</div>
       </div>

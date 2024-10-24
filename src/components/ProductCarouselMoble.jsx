@@ -22,7 +22,7 @@ export const ProductCarouselMobile = () => {
   return (
     <div className="pos_relative mobile-carousel">
       <div>
-        <img src={imgArr[carouselImgIndex]} className="img_responsive" alt="" />
+        <img  src={imgArr[carouselImgIndex]} className="img_responsive" alt="" />
       </div>
 
       <div className="flex align-items-center justify-space-between px-2 carousel-control">
