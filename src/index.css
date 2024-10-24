@@ -306,6 +306,9 @@ nav img {
 .text_right {
   text-align: right;
 }
+.text_left {
+  text-align: left;
+}
 .pos_relative {
   position: relative;
 }
@@ -438,5 +441,4 @@ nav img {
   .align-baseline_lg {
     align-items: baseline;
   }
-
 }

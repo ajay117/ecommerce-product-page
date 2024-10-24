@@ -2,11 +2,10 @@ import PropTypes from "prop-types";
 import ShoeImage from "../assets/images/image-product-1-thumbnail.jpg";
 
 export const CartList = ({ cart, emptyCart }) => {
-  console.log("state of cart:");
   return (
     <div className="cart-list-container">
       <div className="cart-list">
-        <p className="text_bold px-1 py-2 cart-list-heading">Cart</p>
+        <p className="text_bold px-1 py-2 cart-list-heading text_left">Cart</p>
         <section className="px-1">
           {Object.keys(cart).length > 0 ? (
             <>
