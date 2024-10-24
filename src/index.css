@@ -169,7 +169,9 @@ nav img {
 .increment:hover,
 .decrement:hover,
 .increment:active,
-.decrement:active {
+.decrement:active,
+.delete-icon:hover,
+.delete-icon:active {
   transform: scale(0.9);
   opacity: 0.9;
 }

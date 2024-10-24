@@ -30,7 +30,7 @@ export const CartList = ({ cart, emptyCart }) => {
                   </p>
                 </div>
                 <div>
-                  <svg
+                  <svg className="delete-icon"
                     onClick={emptyCart}
                     width="14"
                     height="16"
